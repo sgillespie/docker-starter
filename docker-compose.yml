@@ -1,0 +1,28 @@
+version: '2'
+
+networks:
+  service_network:
+
+volumes:
+  service_data:
+
+services:
+  service:
+    image: busybox:latest
+    container_name: my-service
+    networks:
+      - service_network
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: restart
+    volumes:
+      - service_data:/my/volume
+    volumes_from:
+      - service_config
+
+  service_config:
+    image: my-service-image
+    container_name: my-service-config
+    networks:
+      - service_network
