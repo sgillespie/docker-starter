@@ -13,11 +13,11 @@ https://docs.docker.com/engine/installation
 # Getting Started
  * Clone this repository
 
-    git clone https://github.com/sgillespie/docker-starter.git MY_SERVICE_NAME
+    `git clone https://github.com/sgillespie/docker-starter.git MY_SERVICE_NAME`
     
  * Rename service-config
- 
-    mv service-config MY_SERVICE_NAME-config
+
+    `mv service-config MY_SERVICE_NAME-config`
     
  * Change placeholder references
   * MY_SERVICE_NAME-config/Dockerfile
