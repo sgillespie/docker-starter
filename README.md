@@ -13,8 +13,10 @@ https://docs.docker.com/engine/installation
 # Getting Started
  * Start in an empty repository
  
-        mkdir my-empty-docker-project # or
+        mkdir my-empty-repo # or
         git clone my-empty-repo
+
+        cd my-empty-repo
 
  * Fetch this repository
 
