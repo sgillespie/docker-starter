@@ -18,6 +18,7 @@ https://docs.docker.com/engine/installation
 
  * Fetch this repository
 
+        git init
         git fetch https://github.com/sgillespie/docker-starter.git 
         git reset --hard FETCH_HEAD
 
