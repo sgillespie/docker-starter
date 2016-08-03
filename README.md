@@ -11,13 +11,19 @@ To install Docker Engine, check the official installation instructions:
 https://docs.docker.com/engine/installation
 
 # Getting Started
- * Clone this repository
+ * Start in an empty repository
+ 
+        mkdir my-empty-docker-project # or
+        git clone my-empty-repo
+    
+ * Fetch this repository
 
-    `git clone https://github.com/sgillespie/docker-starter.git MY_SERVICE_NAME`
+        git fetch https://github.com/sgillespie/docker-starter.git 
+        git reset --hard FETCH_HEAD`
     
  * Rename service-config
 
-    `mv service-config MY_SERVICE_NAME-config`
+        mv service-config MY_SERVICE_NAME-config
     
  * Change placeholder references
   * MY_SERVICE_NAME-config/Dockerfile
