@@ -15,12 +15,12 @@ https://docs.docker.com/engine/installation
  
         mkdir my-empty-docker-project # or
         git clone my-empty-repo
-    
+
  * Fetch this repository
 
         git fetch https://github.com/sgillespie/docker-starter.git 
-        git reset --hard FETCH_HEAD`
-    
+        git reset --hard FETCH_HEAD
+
  * Rename service-config
 
         mv service-config MY_SERVICE_NAME-config
