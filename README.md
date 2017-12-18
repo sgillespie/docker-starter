@@ -13,7 +13,7 @@ https://docs.docker.com/engine/installation
 # Getting Started
  * Start in an empty repository
  
-        mkdir my-empty-repo # or
+        mkdir my-empty-repo     # Or,
         git clone my-empty-repo
 
         cd my-empty-repo
@@ -22,16 +22,14 @@ https://docs.docker.com/engine/installation
 
         git init
         git fetch https://github.com/sgillespie/docker-starter.git 
-        git reset --hard FETCH_HEAD
-
- * Rename service-config
-
-        mv service-config MY_SERVICE_NAME-config
+        git checkout FETCH_HEAD -- .
     
  * Change placeholder references
-  * MY_SERVICE_NAME-config/Dockerfile
-  * docker-compose.dev.yml
+  * docker/Dockerfile
+  * docker/assets
   * docker-compose.yml
+  * docker-compose.override.yml
+  * docker-compose.prod.yml
  * Start hacking
 
 # Usage and Workflow
@@ -39,8 +37,8 @@ This is only one of many workflows, but it has worked for me so far.
 
 Build and start the dev containers
 
-    docker-compose -f docker-compose.dev.yml build # Build the containers
-    docker-compose -f docker-compose.dev.yml up -d # Start the dev containers
+    docker-compose build # Build the containers
+    docker-compose up -d # Start the dev containers
     
 When you're satisfied with the results
 
@@ -50,10 +48,10 @@ When you're satisfied with the results
     docker push dockerhubuser/MY_SERVICE_IMAGE:VERSION
 
     # Make sure the dev containers are not running
-    docker-compose -f docker-compose.dev.yml down
+    docker-compose down
 
     # Start the production containers
-    docker-compose -p MYPROJECT up -d
+    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
     
 # Author
 **Sean Gillespie**
