@@ -25,11 +25,11 @@ https://docs.docker.com/engine/installation
         git checkout FETCH_HEAD -- .
     
  * Change placeholder references
-  * docker/Dockerfile
-  * docker/assets
-  * docker-compose.yml
-  * docker-compose.override.yml
-  * docker-compose.prod.yml
+   * docker/Dockerfile
+   * docker/assets
+   * docker-compose.yml
+   * docker-compose.override.yml
+   * docker-compose.prod.yml
  * Start hacking
 
 # Usage and Workflow
