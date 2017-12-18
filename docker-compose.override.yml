@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+  service_config:
+    build: service-config
