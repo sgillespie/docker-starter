@@ -1,1 +1,11 @@
-version: '3'
+version: '3.3'
+
+configs:
+  service_config:
+    file: ./config/config_file
+
+services:
+  service:
+    configs:
+      - source: service_config
+        target: /etc/my-service-config

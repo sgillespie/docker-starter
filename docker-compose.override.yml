@@ -1,5 +1,10 @@
-version: '3'
+version: '3.3'
+
+volumes:
+  service_config:
 
 services:
-  service_config:
-    build: service-config
+  service:
+    build: docker
+    volumes:
+      - service_config:/etc/my-service-config

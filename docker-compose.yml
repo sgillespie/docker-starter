@@ -1,15 +1,14 @@
-version: '3'
+version: '3.3'
 
 networks:
   service_network:
 
 volumes:
   service_data:
-  service_config:
 
 services:
   service:
-    image: busybox:latest
+    image: my-service-img
     networks:
       - service_network
     ports:
@@ -17,11 +16,3 @@ services:
       - '443:443'
     volumes:
       - service_data:/my/volume
-      - service_config:/etc/my-service-config
-
-  service_config:
-    image: my-service-image
-    networks:
-      - service_network
-    volumes:
-      - service_config:/etc/my-service-config
